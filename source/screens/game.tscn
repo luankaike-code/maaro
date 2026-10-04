@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cmer2db0ca8uo"]
+
+[ext_resource type="Script" uid="uid://bww1rbvvhh2oj" path="res://templates/screen/screen.gd" id="1_3x00r"]
+
+[node name="Game" type="Control" unique_id=1646458830]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3x00r")
+metadata/_custom_type_script = "uid://bww1rbvvhh2oj"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1838202426]
