@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://cmer2db0ca8uo"]
 
 [ext_resource type="Script" uid="uid://bww1rbvvhh2oj" path="res://templates/screen/screen.gd" id="1_3x00r"]
+[ext_resource type="PackedScene" uid="uid://bl72nmw0efhvi" path="res://source/entitys/player/player.tscn" id="2_3g41b"]
+[ext_resource type="Texture2D" uid="uid://dmqu8x67qc5ty" path="res://icon.svg" id="4_cd8xd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1x4j"]
+size = Vector2(771, 20)
 
 [node name="Game" type="Control" unique_id=1646458830]
 layout_mode = 3
@@ -9,3 +14,17 @@ script = ExtResource("1_3x00r")
 metadata/_custom_type_script = "uid://bww1rbvvhh2oj"
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1838202426]
+
+[node name="Player" parent="Node2D" unique_id=1929430556 instance=ExtResource("2_3g41b")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D" unique_id=1372188615]
+position = Vector2(0, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D" unique_id=1215229718]
+position = Vector2(-359.5, 0)
+shape = SubResource("RectangleShape2D_f1x4j")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/StaticBody2D" unique_id=2051013955]
+position = Vector2(-337.49994, 0)
+scale = Vector2(5.6953115, 0.15625)
+texture = ExtResource("4_cd8xd")
