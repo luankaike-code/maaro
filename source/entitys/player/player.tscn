@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bl72nmw0efhvi"]
+
+[ext_resource type="Script" uid="uid://calkpug21mrpr" path="res://source/entitys/player/player.gd" id="1_exdey"]
+[ext_resource type="Script" uid="uid://dy41vwu31x3s2" path="res://templates/components/componentInput.gd" id="1_lgbdl"]
+[ext_resource type="Script" uid="uid://infht23ash2m" path="res://templates/components/componentMove.gd" id="2_7w2yw"]
+[ext_resource type="Script" uid="uid://du4tkgwvhpuif" path="res://templates/components/componentGravity.gd" id="2_h7g45"]
+[ext_resource type="Texture2D" uid="uid://cri33u4nbv5ht" path="res://source/entitys/player/player_sheet.png" id="3_7w2yw"]
+[ext_resource type="Script" uid="uid://tv1o11gttcbq" path="res://templates/components/componentPlataformJump.gd" id="3_66jlm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7g45"]
+size = Vector2(11, 17)
+
+[node name="Player" type="CharacterBody2D" unique_id=1929430556]
+script = ExtResource("1_exdey")
+
+[node name="ComponentGravity" type="Node" parent="." unique_id=1696858161 node_paths=PackedStringArray("body")]
+script = ExtResource("2_h7g45")
+multiply = 0.5
+body = NodePath("..")
+metadata/_custom_type_script = "uid://du4tkgwvhpuif"
+
+[node name="ComponentPlataformJump" type="Node" parent="." unique_id=1126821404 node_paths=PackedStringArray("body")]
+script = ExtResource("3_66jlm")
+max_count = -1
+body = NodePath("..")
+metadata/_custom_type_script = "uid://tv1o11gttcbq"
+
+[node name="ComponentInput" type="Node" parent="." unique_id=1131085279]
+script = ExtResource("1_lgbdl")
+metadata/_custom_type_script = "uid://dy41vwu31x3s2"
+
+[node name="ComponentMove" type="Node" parent="." unique_id=1137862208 node_paths=PackedStringArray("body")]
+script = ExtResource("2_7w2yw")
+speed = 100.0
+max_speed = 200.0
+body = NodePath("..")
+metadata/_custom_type_script = "uid://infht23ash2m"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=198943746]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_h7g45")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1846159488]
+texture = ExtResource("3_7w2yw")
+hframes = 4
+vframes = 4
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1933817295]
+zoom = Vector2(5, 5)
