@@ -4,4 +4,3 @@ extends Camera2D
 
 func _physics_process(_delta: float) -> void:
 	global_position = component_follower.get_movimentation()
-	print(global_position)
