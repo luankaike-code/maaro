@@ -17,6 +17,9 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 4
 
 [node name="DrPepperUiConteiner" type="HBoxContainer" parent="Control/MarginContainer" unique_id=848718905]
 layout_mode = 2
+theme_override_constants/separation = -2
