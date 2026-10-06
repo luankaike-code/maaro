@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bh45pswisj4m7"]
+
+[ext_resource type="Script" uid="uid://dbribd7bhw4tj" path="res://source/uis/gameUi/dr_pepper_ui.gd" id="2_8adlu"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sawsx"]
+load_path = "res://.godot/imported/dr_pepper_ui_sheet.png-344d68c939984eb7c013ab29241c6b1e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8adlu"]
+resource_local_to_scene = true
+atlas = SubResource("CompressedTexture2D_sawsx")
+
+[node name="DrPepperUi" type="TextureRect" unique_id=368271471]
+texture = SubResource("AtlasTexture_8adlu")
+stretch_mode = 2
+script = ExtResource("2_8adlu")
