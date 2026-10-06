@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bww1rbvvhh2oj" path="res://templates/screen/screen.gd" id="1_3x00r"]
 [ext_resource type="PackedScene" uid="uid://bl72nmw0efhvi" path="res://source/entitys/player/player.tscn" id="2_3g41b"]
 [ext_resource type="Texture2D" uid="uid://dmqu8x67qc5ty" path="res://icon.svg" id="4_cd8xd"]
+[ext_resource type="PackedScene" uid="uid://bvyj7cdoe8eov" path="res://source/entitys/drPepper/drPepper.tscn" id="4_eml0g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f1x4j"]
 size = Vector2(771, 20)
@@ -28,3 +29,30 @@ shape = SubResource("RectangleShape2D_f1x4j")
 position = Vector2(-337.49994, 0)
 scale = Vector2(5.6953115, 0.15625)
 texture = ExtResource("4_cd8xd")
+
+[node name="DrPepper" parent="." unique_id=257319601 instance=ExtResource("4_eml0g")]
+position = Vector2(-124, -9)
+
+[node name="DrPepper2" parent="." unique_id=615880512 instance=ExtResource("4_eml0g")]
+position = Vector2(-215, -36)
+
+[node name="DrPepper3" parent="." unique_id=1066075166 instance=ExtResource("4_eml0g")]
+position = Vector2(-321, -4)
+
+[node name="DrPepper4" parent="." unique_id=318775818 instance=ExtResource("4_eml0g")]
+position = Vector2(1, -52)
+
+[node name="DrPepper5" parent="." unique_id=669483706 instance=ExtResource("4_eml0g")]
+position = Vector2(-85, -46)
+
+[node name="DrPepper6" parent="." unique_id=405999581 instance=ExtResource("4_eml0g")]
+position = Vector2(-496, -25)
+
+[node name="DrPepper7" parent="." unique_id=2144307631 instance=ExtResource("4_eml0g")]
+position = Vector2(-396, -28)
+
+[node name="DrPepper8" parent="." unique_id=2061316658 instance=ExtResource("4_eml0g")]
+position = Vector2(-726, 2)
+
+[node name="DrPepper9" parent="." unique_id=1948634108 instance=ExtResource("4_eml0g")]
+position = Vector2(-608, -77)
