@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://buek4paio8vou"]
+
+[ext_resource type="Script" uid="uid://dum6hagruwd0j" path="res://source/uis/gameUi/game_ui.gd" id="1_86r8i"]
+
+[node name="GameUi" type="CanvasLayer" unique_id=652398863]
+scale = Vector2(4, 4)
+transform = Transform2D(4, 0, 0, 4, 0, 0)
+script = ExtResource("1_86r8i")
+
+[node name="Control" type="Control" parent="." unique_id=984035273]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=1459486362]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DrPepperUiConteiner" type="HBoxContainer" parent="Control/MarginContainer" unique_id=848718905]
+layout_mode = 2
