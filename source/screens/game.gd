@@ -9,4 +9,3 @@ func _ready() -> void:
 		game_ui.dr_pepper_count += 1
 		dr_pepper.collected.connect(game_ui.dr_pepper_collected)
 	game_ui.update_ui()
-	print(game_ui.dr_pepper_count)
