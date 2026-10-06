@@ -1,17 +1,26 @@
 [gd_scene format=3 uid="uid://cmer2db0ca8uo"]
 
-[ext_resource type="Script" uid="uid://bww1rbvvhh2oj" path="res://templates/screen/screen.gd" id="1_3x00r"]
+[ext_resource type="Script" uid="uid://cmmwn2iw1nue7" path="res://source/screens/game.gd" id="1_ya8kb"]
 [ext_resource type="PackedScene" uid="uid://bl72nmw0efhvi" path="res://source/entitys/player/player.tscn" id="2_3g41b"]
 [ext_resource type="Texture2D" uid="uid://dmqu8x67qc5ty" path="res://icon.svg" id="4_cd8xd"]
 [ext_resource type="PackedScene" uid="uid://bvyj7cdoe8eov" path="res://source/entitys/drPepper/drPepper.tscn" id="4_eml0g"]
+[ext_resource type="PackedScene" uid="uid://buek4paio8vou" path="res://source/uis/gameUi/gameUi.tscn" id="5_ya8kb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f1x4j"]
 size = Vector2(771, 20)
 
 [node name="Game" type="Control" unique_id=1646458830]
 layout_mode = 3
-anchors_preset = 0
-script = ExtResource("1_3x00r")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ya8kb")
 metadata/_custom_type_script = "uid://bww1rbvvhh2oj"
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1838202426]
@@ -56,3 +65,6 @@ position = Vector2(-726, 2)
 
 [node name="DrPepper9" parent="Node2D" unique_id=1948634108 instance=ExtResource("4_eml0g")]
 position = Vector2(-608, -77)
+
+[node name="GameUi" parent="." unique_id=652398863 instance=ExtResource("5_ya8kb")]
+dr_pepper_count = 7
