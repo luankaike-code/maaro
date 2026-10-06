@@ -1,12 +1,20 @@
 class_name GameUi extends CanvasLayer
 
+signal all_dr_pepper_collected()
+
 @export var dr_pepper_count: int = 3
 @export var auto_ui_update: bool = true
 @onready var dr_pepper_ui_conteiner: HBoxContainer = $Control/MarginContainer/DrPepperUiConteiner
 
 var dr_pepper_ui_packed: PackedScene = preload("uid://bh45pswisj4m7")
-var dr_pepper_collects: int = 0
+
 var dr_peppers_ui: Array[DrPepperUi]
+
+var dr_pepper_collects: int = 0:
+	set(new_dr_pepper_collects):
+		dr_pepper_collects = new_dr_pepper_collects
+		if dr_pepper_collects >= dr_pepper_count:
+			all_dr_pepper_collected.emit()
 
 func _ready() -> void:
 	if auto_ui_update:
