@@ -7,9 +7,16 @@ class_name Player extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var component_plataform_animation_states: ComponentPlataformAnimationStates = $ComponentPlataformAnimationStates
+@onready var component_interator: ComponentInterator = $ComponentInterator
 
 func _ready() -> void:
 	animation_player.play("walk")
+	component_interator.interation_entered.connect(_on_interation_entered)
+
+func _on_interation_entered(interation: ComponentInteration) -> void:
+	var entity: Node2D = interation.get_parent()
+	if entity is DrPepper:
+		entity.collect()
 
 func _physics_process(_delta: float) -> void:
 	component_gravity.tick()
