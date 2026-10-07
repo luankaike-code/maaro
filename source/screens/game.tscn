@@ -5,9 +5,16 @@
 [ext_resource type="Texture2D" uid="uid://dmqu8x67qc5ty" path="res://icon.svg" id="4_cd8xd"]
 [ext_resource type="PackedScene" uid="uid://bvyj7cdoe8eov" path="res://source/entitys/drPepper/drPepper.tscn" id="4_eml0g"]
 [ext_resource type="PackedScene" uid="uid://buek4paio8vou" path="res://source/uis/gameUi/gameUi.tscn" id="5_ya8kb"]
+[ext_resource type="PackedScene" uid="uid://cs4wpfntlyplt" path="res://source/entitys/zombie/zombie.tscn" id="6_cd8xd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f1x4j"]
-size = Vector2(771, 20)
+size = Vector2(637.25, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cd8xd"]
+size = Vector2(315.5, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xu75h"]
+size = Vector2(19, 46)
 
 [node name="Game" type="Control" unique_id=1646458830]
 layout_mode = 3
@@ -26,17 +33,21 @@ metadata/_custom_type_script = "uid://bww1rbvvhh2oj"
 [node name="Node2D" type="Node2D" parent="." unique_id=1838202426]
 
 [node name="Player" parent="Node2D" unique_id=1929430556 instance=ExtResource("2_3g41b")]
+position = Vector2(-525, -47)
+
+[node name="Zombie" parent="Node2D" unique_id=766231876 instance=ExtResource("6_cd8xd")]
+position = Vector2(-524, -40)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D" unique_id=1372188615]
 position = Vector2(0, 25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D" unique_id=1215229718]
-position = Vector2(-359.5, 0)
+position = Vector2(-235.625, 0)
 shape = SubResource("RectangleShape2D_f1x4j")
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/StaticBody2D" unique_id=2051013955]
-position = Vector2(-337.49994, 0)
-scale = Vector2(5.6953115, 0.15625)
+position = Vector2(-309.49997, 0)
+scale = Vector2(6.132811, 0.15625)
 texture = ExtResource("4_cd8xd")
 
 [node name="DrPepperConteiner" type="Node2D" parent="Node2D" unique_id=654788490]
@@ -67,6 +78,42 @@ position = Vector2(-726, 2)
 
 [node name="DrPepper9" parent="Node2D/DrPepperConteiner" unique_id=1948634108 instance=ExtResource("4_eml0g")]
 position = Vector2(-608, -77)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Node2D" unique_id=320074701]
+position = Vector2(-225, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D4" unique_id=1654799659]
+position = Vector2(-150.25, -51)
+shape = SubResource("RectangleShape2D_cd8xd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/StaticBody2D4" unique_id=631076605]
+position = Vector2(-148.99998, -50)
+scale = Vector2(2.4531248, 0.09374998)
+texture = ExtResource("4_cd8xd")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Node2D" unique_id=686049458]
+position = Vector2(-225, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D2" unique_id=415430097]
+position = Vector2(-2, -33)
+shape = SubResource("RectangleShape2D_xu75h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/StaticBody2D2" unique_id=1461637975]
+position = Vector2(-2.000001, -31.499998)
+scale = Vector2(0.1562501, 0.3828125)
+texture = ExtResource("4_cd8xd")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Node2D" unique_id=81354116]
+position = Vector2(-148, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D3" unique_id=275273902]
+position = Vector2(-2, -33)
+shape = SubResource("RectangleShape2D_xu75h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/StaticBody2D3" unique_id=940851357]
+position = Vector2(-2.000001, -31.499998)
+scale = Vector2(0.1562501, 0.3828125)
+texture = ExtResource("4_cd8xd")
 
 [node name="GameUi" parent="." unique_id=652398863 instance=ExtResource("5_ya8kb")]
 auto_ui_update = false
