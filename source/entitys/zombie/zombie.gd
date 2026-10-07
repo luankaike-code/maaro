@@ -26,7 +26,3 @@ func _physics_process(_delta: float) -> void:
 
 	component_gravity.tick()
 	component_move.tick()
-	
-	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		print("Collided with: ", collision.get_collider().name)
