@@ -7,8 +7,6 @@ class_name ComponentPlataformJump extends ComponentWithCharacterBody2D
 
 var current_count: int
 
-var velocity: Vector2 = Vector2.ZERO
-
 signal jumped()
 
 func try_jump() -> void:
