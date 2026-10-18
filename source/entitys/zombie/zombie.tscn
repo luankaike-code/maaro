@@ -74,13 +74,13 @@ metadata/_custom_type_script = "uid://infht23ash2m"
 
 [node name="ComponentGravity" type="Node" parent="." unique_id=61436100 node_paths=PackedStringArray("body")]
 script = ExtResource("3_cqs8t")
-multiply = 0.5
 body = NodePath("..")
 metadata/_custom_type_script = "uid://du4tkgwvhpuif"
 
 [node name="ComponentAiPingPong" type="Node" parent="." unique_id=497993668 node_paths=PackedStringArray("body")]
 script = ExtResource("1_njpla")
 body = NodePath("..")
+debug_actived = null
 metadata/_custom_type_script = "uid://dqkbl10rvlasa"
 
 [node name="ComponentPlataformAnimationStates" type="Node" parent="." unique_id=693107254]

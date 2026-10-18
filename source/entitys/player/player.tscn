@@ -114,7 +114,7 @@ script = ExtResource("1_exdey")
 
 [node name="ComponentGravity" type="Node" parent="." unique_id=1696858161 node_paths=PackedStringArray("body")]
 script = ExtResource("2_h7g45")
-multiply = 0.5
+multiply = 10.0
 body = NodePath("..")
 metadata/_custom_type_script = "uid://du4tkgwvhpuif"
 
@@ -141,6 +141,7 @@ metadata/_custom_type_script = "uid://bi6jvreffnm8c"
 
 [node name="ComponentInterator" type="Area2D" parent="." unique_id=1585473]
 script = ExtResource("7_cxvdt")
+debug_actived = null
 metadata/_custom_type_script = "uid://bffpk5acopvac"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ComponentInterator" unique_id=1722251763]
@@ -167,6 +168,7 @@ target = NodePath("../..")
 reference = NodePath("..")
 speed = 1.0
 max_distance = 50.0
+debug_actived = null
 metadata/_custom_type_script = "uid://bfuus2ljux720"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1099582184]
