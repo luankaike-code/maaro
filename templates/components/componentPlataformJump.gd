@@ -1,7 +1,7 @@
 @tool
 class_name ComponentPlataformJump extends Component
 
-@export var force: float = -500.0
+@export var force: float = -1.0
 @export var multiply: float = 1.0
 @export var max_count: int = 1
 
