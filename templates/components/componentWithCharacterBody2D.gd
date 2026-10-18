@@ -7,6 +7,12 @@ class_name ComponentWithCharacterBody2D extends Component
 		if Engine.is_editor_hint():
 			update_configuration_warnings()
 
+@export var max_velocity: Vector2 = Vector2.ONE * 1000
+var velocity: Vector2 = Vector2.ZERO :
+	set(new_velocity):
+		velocity.x = clampf(new_velocity.x, -max_velocity.x, max_velocity.x)
+		velocity.y = clampf(new_velocity.y, -max_velocity.x, max_velocity.x)
+
 func _get_configuration_warnings() -> PackedStringArray:
 	var warnings = super()
 
