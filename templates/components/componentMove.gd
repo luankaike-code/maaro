@@ -1,13 +1,6 @@
 @tool
 class_name ComponentMove extends ComponentWithCharacterBody2D
 
-enum Modes {
-	Plataform,
-	TopDown
-}
-
-@export var mode: Modes = Modes.Plataform
-
 @export var speed: float = 500.0
 
 var direction: Vector2 = Vector2.ZERO
@@ -17,5 +10,5 @@ func tick() -> void:
 	
 	if !direction.x:
 		velocity.x = 0
-	if !direction.y && mode == Modes.TopDown:
+	if !direction.y:
 		velocity.y = 0
