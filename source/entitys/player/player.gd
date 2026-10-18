@@ -18,6 +18,18 @@ func _on_interation_entered(interation: ComponentInteration) -> void:
 	if entity is DrPepper:
 		entity.collect()
 
+func update_animation() -> void:
+	sprite_2d.flip_h = component_plataform_animation_states.is_look_to_left
+	
+	if component_plataform_animation_states.is_falling:
+		animation_player.play("fall")
+	elif component_plataform_animation_states.is_uping:
+		animation_player.play("up")
+	elif component_plataform_animation_states.is_walk:
+		animation_player.play("walk")
+	else:
+		animation_player.play("idle")
+
 func _physics_process(_delta: float) -> void:
 	component_gravity.tick()
 	component_input.update()
@@ -31,12 +43,5 @@ func _physics_process(_delta: float) -> void:
 	component_plataform_animation_states.update(
 		component_input.move_dir, velocity
 	)
-	sprite_2d.flip_h = component_plataform_animation_states.is_look_to_left
-	if component_plataform_animation_states.is_falling:
-		animation_player.play("fall")
-	elif component_plataform_animation_states.is_uping:
-		animation_player.play("up")
-	elif component_plataform_animation_states.is_walk:
-		animation_player.play("walk")
-	else:
-		animation_player.play("idle")
+	
+	update_animation()
