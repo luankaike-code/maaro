@@ -67,9 +67,10 @@ script = ExtResource("1_vjcb4")
 
 [node name="ComponentMove" type="Node" parent="." unique_id=631383015 node_paths=PackedStringArray("body")]
 script = ExtResource("2_cqs8t")
-speed = 100.0
+speed = 200.0
 max_speed = 200.0
 body = NodePath("..")
+debug_actived = true
 metadata/_custom_type_script = "uid://infht23ash2m"
 
 [node name="ComponentGravity" type="Node" parent="." unique_id=61436100 node_paths=PackedStringArray("body")]

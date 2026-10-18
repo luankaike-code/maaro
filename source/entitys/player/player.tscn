@@ -114,12 +114,14 @@ script = ExtResource("1_exdey")
 
 [node name="ComponentGravity" type="Node" parent="." unique_id=1696858161 node_paths=PackedStringArray("body")]
 script = ExtResource("2_h7g45")
-multiply = 10.0
+max_velocity = 20.0
 body = NodePath("..")
+debug_actived = true
 metadata/_custom_type_script = "uid://du4tkgwvhpuif"
 
 [node name="ComponentPlataformJump" type="Node" parent="." unique_id=1126821404 node_paths=PackedStringArray("body")]
 script = ExtResource("3_66jlm")
+force = -300.0
 max_count = -1
 body = NodePath("..")
 metadata/_custom_type_script = "uid://tv1o11gttcbq"
