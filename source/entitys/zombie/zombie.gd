@@ -21,8 +21,10 @@ func _on_direction_changed() -> void:
 
 	sprite_2d.flip_h = component_plataform_animation_states.is_look_to_left
 
+func move_tick() -> void:
+	component_move.tick()
+
 func _physics_process(_delta: float) -> void:
 	component_ai_ping_pong.update()
 
 	component_gravity.tick()
-	component_move.tick()
