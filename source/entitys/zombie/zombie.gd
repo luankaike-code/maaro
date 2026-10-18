@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var component_plataform_animation_states: ComponentPlataformAnimationStates = $ComponentPlataformAnimationStates
+@onready var component_calc_absolute_velocity: ComponentCalcAbsoluteVelocity = $ComponentCalcAbsoluteVelocity
 
 func _ready() -> void:
 	animation_player.play("move")
@@ -30,6 +31,6 @@ func _physics_process(delta: float) -> void:
 
 	component_gravity.tick(delta)
 	
-	velocity = component_move.velocity + component_gravity.velocity
+	velocity = component_calc_absolute_velocity.get_absolute_velocity()
 	move_and_slide()
 	component_move.velocity = Vector2.ZERO

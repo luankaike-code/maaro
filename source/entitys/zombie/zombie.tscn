@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://infht23ash2m" path="res://templates/components/componentMove.gd" id="2_cqs8t"]
 [ext_resource type="Script" uid="uid://du4tkgwvhpuif" path="res://templates/components/componentGravity.gd" id="3_cqs8t"]
 [ext_resource type="Script" uid="uid://bi6jvreffnm8c" path="res://templates/components/componentPlataformAnimationStates.gd" id="5_ktqbu"]
+[ext_resource type="Script" uid="uid://dd5yeu7k142an" path="res://templates/components/componentCalcAbsoluteVelocity.gd" id="6_3ubvk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xu75h"]
 size = Vector2(16, 7)
@@ -89,6 +90,11 @@ metadata/_custom_type_script = "uid://dqkbl10rvlasa"
 [node name="ComponentPlataformAnimationStates" type="Node" parent="." unique_id=693107254]
 script = ExtResource("5_ktqbu")
 metadata/_custom_type_script = "uid://bi6jvreffnm8c"
+
+[node name="ComponentCalcAbsoluteVelocity" type="Node" parent="." unique_id=977959361 node_paths=PackedStringArray("components")]
+script = ExtResource("6_3ubvk")
+components = [NodePath("../ComponentMove"), NodePath("../ComponentGravity")]
+metadata/_custom_type_script = "uid://dd5yeu7k142an"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2107071967]
 texture = ExtResource("2_7c0wv")

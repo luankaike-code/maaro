@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://tv1o11gttcbq" path="res://templates/components/componentPlataformJump.gd" id="3_66jlm"]
 [ext_resource type="Script" uid="uid://bi6jvreffnm8c" path="res://templates/components/componentPlataformAnimationStates.gd" id="6_k53vq"]
 [ext_resource type="Script" uid="uid://bffpk5acopvac" path="res://templates/components/componentInterator.gd" id="7_cxvdt"]
+[ext_resource type="Script" uid="uid://dd5yeu7k142an" path="res://templates/components/componentCalcAbsoluteVelocity.gd" id="7_k70ox"]
 [ext_resource type="Script" uid="uid://bfuomo4v47kjb" path="res://source/entitys/player/camera_2d.gd" id="8_2qwv0"]
 [ext_resource type="Script" uid="uid://bfuus2ljux720" path="res://templates/components/componentFollower.gd" id="8_hh1f2"]
 
@@ -140,6 +141,11 @@ metadata/_custom_type_script = "uid://infht23ash2m"
 [node name="ComponentPlataformAnimationStates" type="Node" parent="." unique_id=1435216166]
 script = ExtResource("6_k53vq")
 metadata/_custom_type_script = "uid://bi6jvreffnm8c"
+
+[node name="ComponentCalcAbsoluteVelocity" type="Node" parent="." unique_id=835315062 node_paths=PackedStringArray("components")]
+script = ExtResource("7_k70ox")
+components = [NodePath("../ComponentGravity"), NodePath("../ComponentPlataformJump"), NodePath("../ComponentMove")]
+metadata/_custom_type_script = "uid://dd5yeu7k142an"
 
 [node name="ComponentInterator" type="Area2D" parent="." unique_id=1585473]
 script = ExtResource("7_cxvdt")
