@@ -33,10 +33,10 @@ metadata/_custom_type_script = "uid://bww1rbvvhh2oj"
 [node name="Node2D" type="Node2D" parent="." unique_id=1838202426]
 
 [node name="Player" parent="Node2D" unique_id=1929430556 instance=ExtResource("2_3g41b")]
-position = Vector2(-525, -47)
+position = Vector2(-256, -50)
 
 [node name="Zombie" parent="Node2D" unique_id=766231876 instance=ExtResource("6_cd8xd")]
-position = Vector2(-524, -40)
+position = Vector2(-201, 3)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D" unique_id=1372188615]
 position = Vector2(0, 25)
@@ -107,11 +107,11 @@ texture = ExtResource("4_cd8xd")
 position = Vector2(-148, 24)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D3" unique_id=275273902]
-position = Vector2(-2, -33)
+position = Vector2(-29, -34)
 shape = SubResource("RectangleShape2D_xu75h")
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/StaticBody2D3" unique_id=940851357]
-position = Vector2(-2.000001, -31.499998)
+position = Vector2(-29, -33)
 scale = Vector2(0.1562501, 0.3828125)
 texture = ExtResource("4_cd8xd")
 
