@@ -1,6 +1,8 @@
 @tool
 class_name Component extends Node
 
+@export var debug_actived: bool = false
+
 func _get_configuration_warnings() -> PackedStringArray:
 	var warnings = PackedStringArray()
 
