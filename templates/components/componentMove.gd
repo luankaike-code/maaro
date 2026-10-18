@@ -19,6 +19,14 @@ enum Modes {
 
 var direction: Vector2 = Vector2.ZERO
 
+var velocity: Vector2 = Vector2.ZERO :
+	set(new_velocity):
+		velocity.x = clampf(new_velocity.x, -max_speed, max_speed)
+		if mode == Modes.TopDown:
+			velocity.y = clampf(new_velocity.y, -max_speed, max_speed)
+		else:
+			velocity.y = new_velocity.y
+
 func _get_configuration_warnings() -> PackedStringArray:
 	var warnings = super()
 
@@ -32,14 +40,12 @@ func _ready() -> void:
 		update_configuration_warnings()
 
 func tick() -> void:
-	body.velocity += direction * speed
-	
-	body.velocity.x = clampf(body.velocity.x, -max_speed, max_speed)
-	body.velocity.y = clampf(body.velocity.y, -max_speed, max_speed)
+	velocity += direction * speed
 	
 	if !direction.x:
-		body.velocity.x = 0
+		velocity.x = 0
 	if !direction.y && mode == Modes.TopDown:
-		body.velocity.y = 0
-		
+		velocity.y = 0
+	
+	body.velocity = velocity
 	body.move_and_slide()
