@@ -2,6 +2,7 @@
 class_name ComponentGravity extends Component
 
 @export var multiply: float = 1.0
+@export var max_velocity: float = 100.0
 
 @export var body: CharacterBody2D:
 	set(new_body):
@@ -10,6 +11,10 @@ class_name ComponentGravity extends Component
 			update_configuration_warnings()
 
 var force: Vector2 = Vector2.ZERO
+var velocity: Vector2 = Vector2.ZERO :
+	set(new_velocity):
+		velocity.x = clampf(new_velocity.x, -max_velocity, max_velocity)
+		velocity.y = clampf(new_velocity.y, -max_velocity, max_velocity)
 
 func _get_configuration_warnings() -> PackedStringArray:
 	var warnings = super()
@@ -25,5 +30,9 @@ func _ready() -> void:
 
 func tick() -> void:
 	if not body.is_on_floor():
-		body.velocity.y += body.get_gravity().y * multiply
-		body.move_and_slide()
+		velocity += body.get_gravity() * multiply
+	else:
+		velocity = Vector2.ZERO
+	
+	body.velocity = velocity
+	body.move_and_slide()
