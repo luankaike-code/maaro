@@ -28,6 +28,3 @@ func tick() -> void:
 		velocity.x = 0
 	if !direction.y && mode == Modes.TopDown:
 		velocity.y = 0
-	
-	body.velocity = velocity
-	body.move_and_slide()
