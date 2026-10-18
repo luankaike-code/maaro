@@ -1,5 +1,5 @@
 @tool
-class_name ComponentAiPingPong extends Component
+class_name ComponentAiPingPong extends ComponentWithCharacterBody2D
 
 signal direction_changed()
 
@@ -9,25 +9,6 @@ signal direction_changed()
 			return
 		direction = new_direction
 		direction_changed.emit()
-		
-
-@export var body: CharacterBody2D:
-	set(new_body):
-		body = new_body
-		if Engine.is_editor_hint():
-			update_configuration_warnings()
-
-func _get_configuration_warnings() -> PackedStringArray:
-	var warnings = super()
-
-	if !body:
-		warnings.append("Define body")
-
-	return warnings
-
-func _ready() -> void:
-	if Engine.is_editor_hint():
-		update_configuration_warnings()
 
 func update() -> void:
 	if body.is_on_wall():
