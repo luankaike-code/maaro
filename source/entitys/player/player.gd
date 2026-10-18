@@ -30,18 +30,21 @@ func update_animation() -> void:
 	else:
 		animation_player.play("idle")
 
-func _physics_process(_delta: float) -> void:
-	component_gravity.tick()
+func _physics_process(delta: float) -> void:
+	component_gravity.tick(delta)
 	component_input.update()
-	
-	component_plataform_jump.update(component_input.action_1_pressed)
+	component_plataform_jump.update(component_gravity.velocity)
 	
 	component_move.direction = component_input.move_dir
-	component_move.direction.y += component_plataform_jump.velocity_y
 	component_move.tick()
+	
+	if component_input.action_1_pressed:
+		component_plataform_jump.try_jump()
 	
 	component_plataform_animation_states.update(
 		component_input.move_dir, velocity
 	)
 	
 	update_animation()
+	velocity = component_plataform_jump.velocity + component_move.velocity + component_gravity.velocity
+	move_and_slide()
