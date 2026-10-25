@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Zombie extends CharacterBody2D
 
 @onready var component_move: ComponentMove = $ComponentMove
 @onready var component_ai_ping_pong: ComponentAiPingPong = $ComponentAiPingPong
