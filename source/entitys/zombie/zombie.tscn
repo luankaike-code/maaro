@@ -69,6 +69,7 @@ script = ExtResource("1_vjcb4")
 [node name="ComponentMove" type="Node" parent="." unique_id=631383015 node_paths=PackedStringArray("body")]
 script = ExtResource("2_cqs8t")
 speed = 200.0
+has_acceleration = null
 body = NodePath("..")
 max_velocity = Vector2(200, 0)
 debug_actived = true

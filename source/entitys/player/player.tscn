@@ -112,11 +112,11 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" unique_id=1929430556]
 script = ExtResource("1_exdey")
+coyote_time_in_seg = 1.0
 
 [node name="ComponentGravity" type="Node" parent="." unique_id=1696858161 node_paths=PackedStringArray("body")]
 script = ExtResource("2_h7g45")
 body = NodePath("..")
-debug_actived = true
 metadata/_custom_type_script = "uid://du4tkgwvhpuif"
 
 [node name="ComponentPlataformJump" type="Node" parent="." unique_id=1126821404 node_paths=PackedStringArray("body")]
