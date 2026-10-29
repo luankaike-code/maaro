@@ -24,3 +24,9 @@ func _get_configuration_warnings() -> PackedStringArray:
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		update_configuration_warnings()
+
+func body_is_on_floor() -> bool:
+	if body is CharacterBodyPlataform2D:
+		return body.plataform_is_on_floor()
+	else:
+		return body.is_on_floor()
