@@ -42,6 +42,7 @@ func _physics_process(delta: float) -> void:
 	component_move.tick()
 	
 	if component_input.action_1_pressed:
+		ignore_next_coyote_time_frame()
 		component_plataform_jump.try_jump()
 	
 	component_plataform_animation_states.update(
