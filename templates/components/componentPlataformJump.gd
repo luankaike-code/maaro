@@ -20,8 +20,8 @@ func try_jump() -> void:
 
 func tick(gravity_velocity: Vector2) -> void:
 	velocity += gravity_velocity
-	if body.is_on_floor() || body.is_on_ceiling():
+	if body_is_on_floor() || body.is_on_ceiling():
 		velocity = Vector2.ZERO
 		
-	if body.is_on_floor():
+	if body_is_on_floor():
 		current_count = 0
