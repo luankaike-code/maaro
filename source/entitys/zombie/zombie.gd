@@ -27,7 +27,7 @@ func move_tick() -> void:
 	component_move.tick()
 
 func _physics_process(delta: float) -> void:
-	component_ai_ping_pong.update()
+	component_ai_ping_pong.tick()
 
 	component_gravity.tick(delta)
 	

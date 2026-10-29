@@ -10,6 +10,6 @@ signal direction_changed()
 		direction = new_direction
 		direction_changed.emit()
 
-func update() -> void:
+func tick() -> void:
 	if body.is_on_wall():
 		direction = body.get_wall_normal()

@@ -18,7 +18,7 @@ func try_jump() -> void:
 	
 	velocity = Vector2(0, force * multiply)
 
-func update(gravity_velocity: Vector2) -> void:
+func tick(gravity_velocity: Vector2) -> void:
 	velocity += gravity_velocity
 	if body.is_on_floor() || body.is_on_ceiling():
 		velocity = Vector2.ZERO

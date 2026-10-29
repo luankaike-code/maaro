@@ -1,4 +1,4 @@
-class_name Player extends CharacterBody2D
+class_name Player extends CharacterBodyPlataform2D
 
 @onready var component_move: ComponentMove = $ComponentMove
 @onready var component_input: ComponentInput = $ComponentInput
@@ -32,9 +32,11 @@ func update_animation() -> void:
 		animation_player.play("idle")
 
 func _physics_process(delta: float) -> void:
+	super(delta)
+	
 	component_gravity.tick(delta)
 	component_input.update()
-	component_plataform_jump.update(component_gravity.velocity)
+	component_plataform_jump.tick(component_gravity.velocity)
 	
 	component_move.direction = component_input.move_dir
 	component_move.tick()
